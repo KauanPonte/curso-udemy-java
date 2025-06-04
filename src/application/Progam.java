@@ -2,28 +2,29 @@ package application;
 
 import java.util.Scanner;
 
+import entities.Triangle;
+
 public class Progam {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		double Xa, Xb, Xc, Ya, Yb, Yc;
+		Triangle x, y;
+		x = new Triangle();
+		y = new Triangle();
 		
 		System.out.println("Entre com as mendidas do triangulo X: ");
-		Xa = sc.nextDouble();
-		Xb = sc.nextDouble();
-		Xc = sc.nextDouble();
+		x.a = sc.nextDouble();
+		x.b = sc.nextDouble();
+		x.c = sc.nextDouble();
 		
 		System.out.println("Entre com as mendidas do triangulo Y: ");
-		Ya = sc.nextDouble();
-		Yb = sc.nextDouble();
-		Yc = sc.nextDouble();
+		y.a = sc.nextDouble();
+		y.b = sc.nextDouble();
+		y.c = sc.nextDouble();
 		
-		double p = ( Xa + Xb + Xc ) / 2;
-		double areaX = Math.sqrt(p*(p-Xa)*(p-Xb)*(p-Xc));
-		
-		p = ( Ya + Yb + Yc ) / 2;
-		double areaY = Math.sqrt(p*(p-Ya)*(p-Yb)*(p-Yc));
+		double areaX = x.area();
+		double areaY = y.area();
 		
 		System.out.printf("Area do triangulo X: %.4f \n", areaX );
 		System.out.printf("Area do triangulo Y: %.4f \n", areaY );
