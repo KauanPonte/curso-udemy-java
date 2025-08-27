@@ -53,17 +53,7 @@ public class RH {
 		}
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 		
 		sc.close();
 
